@@ -12,7 +12,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.js$/,
-            loader: 'babel-loader'
+            loader: 'babel-loader!jsx-loader?harmony'
         },{
             test: /\.jsx$/,
             loader: 'babel-loader!jsx-loader?harmony'
