@@ -5,20 +5,18 @@ var webpack = require("webpack");
 
 
 module.exports = {
-    entry : "./src/index.jsx",
+    entry : "./src/index.js",
     output : {
         filename: "./js/bundle.js"
     },
     module: {
         loaders: [{
             test: /\.js$/,
-            loader: 'babel-loader!jsx-loader?harmony'
-        },{
-            test: /\.jsx$/,
-            loader: 'babel-loader!jsx-loader?harmony'
+            loader: 'babel',
+            exclude: /node_modules/
         }]
     },
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['', '.js']
     }
 };
